@@ -1,0 +1,207 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #444;
+}
+
+.Fon {
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
+  width: 600px;
+  height: 400px;
+  inset: 0;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+
+  scale: 0.9;
+  opacity: 1;
+  transition: 0.5s;
+  border: 1px solid #401232;
+
+  gap: 4%;
+}
+
+
+
+.CalculatorPanelLeft {
+  background-color: #ffd700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+
+  border-radius: 10px;
+  
+}
+
+.Up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 15%;
+  padding: 5px;
+}
+
+.Gold-calculator__expression {
+  color: #fff;
+  font-size: 1rem;
+  flex: 1;
+  text-align: left;
+}
+
+.Gold-calculator__screen {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px #000;
+}
+
+.Gold-calculator__result {
+  color: #00ff00;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  min-width: 90px;
+}
+
+.Down {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 65%;
+}
+
+.GoldCalculatorScreen {
+  background: linear-gradient(to top, #444 0%, #222 100%);
+  border: 2px inset #d4af37;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+  width: 100%;
+  height: 100%;
+}
+
+.GoldCalculatorButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 2px;
+   
+}
+
+.Pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 3px;
+  margin-bottom: 4px; 
+}
+
+.Pillar button {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  
+}
+
+.Gold-btn {
+  background: linear-gradient(#e1c16e, #cdaa63);
+  border: 1px solid #aa8c3d;
+  color: #2b1b00;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 6px;
+  box-shadow: 0 3px 0 #a58238;
+  text-shadow: 0 1px 0 #fff5d0;
+  transition: all 0.1s ease-in-out;
+}
+
+.Gold-btn:hover {
+  background: linear-gradient(#ffe082, #d4a017);
+  box-shadow: 0 0 6px #fff176;
+  cursor: pointer;
+}
+
+.Gold-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #a58238;
+}
+
+.CalculatorPanelRight {
+  background: #000;
+  font-family: monospace;
+  color: #00ff00;
+  border-left: 4px solid #444;
+  box-shadow: inset 0 0 10px #0f0;
+  width: 40%;
+  height: 80%;
+
+  border-radius: 10px;
+
+}
+
+.HistoryTitle {
+  color: #00ff00;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #0f0;
+  text-align: center;
+}
+
+.HistoryList {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 4%;
+}
+
+.HistoryList li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .Fon {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .CalculatorPanelLeft,
+  .CalculatorPanelRight {
+    width: 100%;
+    height: auto;
+  }
+
+  .Pillar button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .HistoryTitle {
+    font-size: 1rem;
+  }
+}
